@@ -16,11 +16,7 @@
   <!-- Modernizr -->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
 
-  <script src="js/libs/placeholder_polyfill.jquery.min.combo.js"></script>
-
   <!-- GroundworkCSS -->
-  
-  <link type="text/css" rel="stylesheet" href="css/placeholder_polyfill.min.css">
   <link type="text/css" rel="stylesheet" href="css/groundwork.css">
   <!--[if IE]>
   <link type="text/css" rel="stylesheet" href="css/groundwork-ie.css">
@@ -41,18 +37,13 @@
   </style>
 
   <script>
-    // Modernizr.load({
-    //     test: Modernizr.input.placeholder,
-    //     nope: [
-    //             'css/placeholder_polyfill.min.css',
-    //             'js/libs/placeholder_polyfill.jquery.min.combo.js'
-    //           ]
-    // });
-
-    placeHolderConfig = {
-        // forcing the polyfill to run no matter if the browser could do it without help
-        forceApply : true
-    }
+    Modernizr.load({
+        test: Modernizr.input.placeholder,
+        nope: [
+                'css/placeholder_polyfill.min.css',
+                'js/libs/placeholder_polyfill.jquery.min.combo.js'
+              ]
+    });
   </script>
 </head>
 <body>
