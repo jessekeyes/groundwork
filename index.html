@@ -9,13 +9,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>Deployable GroundworkCSS Stand-Alone Grid System</title>
 
-  <!-- Modernizr -->
-  <script src="js/libs/modernizr-2.6.2.min.js"></script>
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>
 
+  <!-- Modernizr -->
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+
+  <script src="js/libs/placeholder_polyfill.jquery.min.combo.js"></script>
+
   <!-- GroundworkCSS -->
+  
+  <link type="text/css" rel="stylesheet" href="css/placeholder_polyfill.min.css">
   <link type="text/css" rel="stylesheet" href="css/groundwork.css">
   <!--[if IE]>
   <link type="text/css" rel="stylesheet" href="css/groundwork-ie.css">
@@ -36,13 +41,18 @@
   </style>
 
   <script>
-    Modernizr.load({
-        test: Modernizr.input.placeholder,
-        nope: [
-                'placeholder_polyfill.min.css',
-                'placeholder_polyfill.jquery.min.combo.js'
-              ]
-    });
+    // Modernizr.load({
+    //     test: Modernizr.input.placeholder,
+    //     nope: [
+    //             'css/placeholder_polyfill.min.css',
+    //             'js/libs/placeholder_polyfill.jquery.min.combo.js'
+    //           ]
+    // });
+
+    placeHolderConfig = {
+        // forcing the polyfill to run no matter if the browser could do it without help
+        forceApply : true
+    }
   </script>
 </head>
 <body>
@@ -60,7 +70,8 @@
       <div class="one whole padded">
         <h2>form placeholder test</h2>
         <p>
-          <input type="text" placeholder="I'm placeholder text!" />
+          <label for="text">Sweet label</label><br>
+          <input id="text" type="text" placeholder="I'm placeholder text!" />
         </p>
       </div>
     </div>

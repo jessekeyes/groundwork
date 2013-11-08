@@ -2,7 +2,7 @@ html.ie .hide-on-desktop {
   display: none;
 }
 html.lt-ie9 {
-  min-width: 900px !important;
+  min-width: 1200px !important;
 }
 html.lt-ie9 body {
   width: auto !important;
